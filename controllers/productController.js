@@ -79,7 +79,7 @@ export const getById = async (req,res,next)=>{
 export const deleteProduct = async (req,res,next) =>{
     const productId = req.params.id;
     let product;
-    try {controllers/productController.js
+    try {
         product = await Product.findByIdAndRemove(productId)
       } catch (error) {
          console.log(`Error: ${error.message}`);
